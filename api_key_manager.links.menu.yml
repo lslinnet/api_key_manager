@@ -1,0 +1,9 @@
+
+# API Key Authentication menu items definition
+entity.auth_api_key.collection:
+  title: 'API Key Authentication'
+  route_name: entity.auth_api_key.collection
+  description: 'List API Key Authentication (bundles)'
+  parent: system.admin_config_system
+  weight: 99
+

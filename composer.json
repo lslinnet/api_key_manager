@@ -1,0 +1,14 @@
+{
+  "name": "drupal/api_key_manager",
+  "type": "drupal-module",
+  "description": "A handler for API key authentication management for Drupal 8",
+  "keywords": ["Drupal", "Authentication", "REST", "Services"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/api_key_manager",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/api_key_manager",
+    "source": "http://cgit.drupalcode.org/api_key_manager"
+  },
+  "require": { }
+}

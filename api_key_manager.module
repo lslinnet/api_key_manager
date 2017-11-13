@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Contains api_key_manager.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function api_key_manager_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the api_key_manager module.
+    case 'help.page.api_key_manager':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('A handler for API key authentication management for Drupal 8') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+

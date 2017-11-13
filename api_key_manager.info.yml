@@ -1,0 +1,7 @@
+name: API Key manager
+type: module
+description: A handler for API key authentication management for Drupal 8
+core: 8.x
+package: Web services
+dependencies:
+  - rest
