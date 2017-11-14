@@ -85,7 +85,7 @@ class ApiKeyAuth implements AuthenticationProviderInterface {
     }
     $request_time = \Drupal::time()->getRequestTime();
     if (!($exp > $request_time && $request_time > $nbf)) {
-      throw new AccessDeniedHttpException('');
+      throw new AccessDeniedHttpException('Request time do not match constraints. Server registered request at ' . $request_time);
     }
     $payload = implode('',[
       $key,
