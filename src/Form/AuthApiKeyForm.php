@@ -5,6 +5,7 @@ namespace Drupal\api_key_manager\Form;
 use Drupal\Core\Entity\EntityForm;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\api_key_manager\Entity\AuthApiKey;
+use Drupal\user\Entity\User;
 
 /**
  * Class AuthApiKeyForm.
@@ -39,10 +40,15 @@ class AuthApiKeyForm extends EntityForm {
       '#disabled' => !$auth_api_key->isNew(),
     ];
 
+    $user = 0;
+    if ($auth_api_key->uid()) {
+      $user = User::load($auth_api_key->uid());
+    }
+
     $form['uid'] = [
       '#type' => 'entity_autocomplete',
       '#target_type' => 'user',
-      '#default_value' => $auth_api_key->uid() || 0,
+      '#default_value' => $user,
       '#required' => TRUE,
     ];
 
